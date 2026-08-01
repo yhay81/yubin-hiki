@@ -34,7 +34,7 @@ if ($SitemapLocations.Count -ne $ExpectedSitemaps) { throw "Expected $ExpectedSi
 $Urls = [System.Collections.Generic.List[string]]::new()
 foreach ($SitemapLocation in $SitemapLocations) {
     if (-not $SitemapLocation.StartsWith("$NormalizedBaseUrl/")) { throw "Sitemap location is outside the production origin" }
-    $Response = Invoke-WebRequest -Uri "$SitemapLocation?v=$Stamp" -SkipHttpErrorCheck -TimeoutSec 30
+    $Response = Invoke-WebRequest -Uri "${SitemapLocation}?v=$Stamp" -SkipHttpErrorCheck -TimeoutSec 30
     if ($Response.StatusCode -ne 200) { throw "Child sitemap is unavailable: $SitemapLocation" }
     foreach ($Match in [regex]::Matches($Response.Content, "<loc>([^<]+)</loc>")) {
         $Url = $Match.Groups[1].Value

@@ -11,6 +11,7 @@ describe("product surface", () => {
   const css = read("public/styles.css");
   const migration = read("migrations/0001_postal_and_telemetry.sql");
   const builder = read("scripts/build_postal.py");
+  const indexNow = read("ops/submit-indexnow.ps1");
 
   it("communicates through a postal visual system without oversized type", () => {
     expect(worker).toContain('class="envelope"');
@@ -39,5 +40,10 @@ describe("product surface", () => {
   it("lets D1 manage import transactions", () => {
     expect(builder).not.toContain('lines = ["BEGIN TRANSACTION;"]');
     expect(builder).not.toContain('lines.append("COMMIT;")');
+  });
+
+  it("delimits PowerShell variables before sitemap query strings", () => {
+    expect(indexNow).toContain('"${SitemapLocation}?v=$Stamp"');
+    expect(indexNow).not.toContain('"$SitemapLocation?v=$Stamp"');
   });
 });
