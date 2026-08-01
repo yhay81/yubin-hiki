@@ -46,8 +46,9 @@ $ExpectedUrls = [int]$Meta.unique_postal_codes + 4
 if ($Urls.Count -ne $ExpectedUrls) { throw "Expected $ExpectedUrls URLs, found $($Urls.Count)" }
 
 $Submitted = 0
-for ($Start = 0; $Start -lt $Urls.Count; $Start += 10000) {
-    $End = [Math]::Min($Start + 9999, $Urls.Count - 1)
+$BatchSize = 5000
+for ($Start = 0; $Start -lt $Urls.Count; $Start += $BatchSize) {
+    $End = [Math]::Min($Start + $BatchSize - 1, $Urls.Count - 1)
     $Batch = @($Urls[$Start..$End])
     $Payload = @{
         host = ([uri]$NormalizedBaseUrl).Host
@@ -65,5 +66,5 @@ for ($Start = 0; $Start -lt $Urls.Count; $Start += 10000) {
     service = ([uri]$NormalizedBaseUrl).Host
     status = 200
     url_count = $Submitted
-    batches = [Math]::Ceiling($Submitted / 10000)
+    batches = [Math]::Ceiling($Submitted / $BatchSize)
 } | ConvertTo-Json -Depth 3

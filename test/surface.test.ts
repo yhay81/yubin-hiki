@@ -46,4 +46,9 @@ describe("product surface", () => {
     expect(indexNow).toContain('"${SitemapLocation}?v=$Stamp"');
     expect(indexNow).not.toContain('"$SitemapLocation?v=$Stamp"');
   });
+
+  it("keeps IndexNow batches below the observed request-size limit", () => {
+    expect(indexNow).toContain("$BatchSize = 5000");
+    expect(indexNow).toContain("$Start += $BatchSize");
+  });
 });
