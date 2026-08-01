@@ -1,0 +1,10 @@
+{
+  "name": "郵便引き",
+  "short_name": "郵便引き",
+  "description": "郵便番号と住所をどちらからでも引ける宛名検索",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3efe3",
+  "theme_color": "#f3efe3",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

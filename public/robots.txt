@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yubin-hiki.yhay81.com/sitemap.xml
+

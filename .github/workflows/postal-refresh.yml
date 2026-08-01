@@ -1,0 +1,44 @@
+name: postal-data-refresh
+
+on:
+  schedule:
+    - cron: "23 21 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - run: npm run postal:refresh
+      - run: npm run postal:verify
+      - name: Create update pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "Postal data is current"
+            exit 0
+          fi
+          branch="automation/postal-data-$(date -u +%Y%m%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/source/utf_ken_all.zip src/generated/postal-meta.json public/sitemap.xml public/sitemaps
+          git commit -m "Update Japan Post postal data"
+          git push --force-with-lease origin "$branch"
+          gh pr create --base main --head "$branch" --title "Update Japan Post postal data" --body "Automated weekly refresh from Japan Post's official UTF-8 national postal-code archive. Review the source date, digest, counts, and generated sitemap changes before merging."

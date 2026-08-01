@@ -1,0 +1,10 @@
+{
+  "csv_bytes": 18357448,
+  "data_updated_at": "2026-07-31",
+  "prefectures": 47,
+  "rows": 124513,
+  "sha256": "0b52620fb659846e1893416b333e23154243060325ff1d3d3747b221b915a19d",
+  "source_url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+  "unique_postal_codes": 120682,
+  "zip_bytes": 2135283
+}

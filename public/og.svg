@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3efe3"/>
+  <path d="M0 90h1200M0 540h1200" stroke="#c9c0ad" stroke-width="2"/>
+  <g transform="translate(675 108) rotate(2 210 135)">
+    <rect x="0" y="0" width="420" height="270" fill="#fffdf6" stroke="#bbae94" stroke-width="3"/>
+    <path d="M0 270L210 140l210 130M420 270L265 150" fill="none" stroke="#d4c9b4" stroke-width="2"/>
+    <g transform="translate(44 50)" fill="none" stroke="#bd2631" stroke-width="3">
+      <rect x="0" y="0" width="36" height="45"/><rect x="44" y="0" width="36" height="45"/><rect x="88" y="0" width="36" height="45"/>
+      <path d="M137 23h24"/>
+      <rect x="174" y="0" width="36" height="45"/><rect x="218" y="0" width="36" height="45"/><rect x="262" y="0" width="36" height="45"/><rect x="306" y="0" width="36" height="45"/>
+    </g>
+    <g transform="translate(315 142)">
+      <rect width="67" height="78" fill="none" stroke="#bd2631" stroke-width="4"/>
+      <text x="33" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="32" fill="#bd2631">〒</text>
+      <text x="33" y="68" text-anchor="middle" font-family="monospace" font-size="9" fill="#bd2631">JAPAN</text>
+    </g>
+    <path d="M78 152h190M105 184h160M145 216h125" stroke="#a99c84" stroke-width="3"/>
+  </g>
+  <g transform="translate(105 142)">
+    <circle cx="42" cy="42" r="40" fill="none" stroke="#bd2631" stroke-width="4"/>
+    <text x="42" y="57" text-anchor="middle" font-family="Georgia,serif" font-size="48" fill="#bd2631">〒</text>
+    <text x="0" y="148" font-family="Yu Mincho,Hiragino Mincho ProN,serif" font-size="58" font-weight="700" letter-spacing="10" fill="#20201e">郵便引き</text>
+    <text x="2" y="200" font-family="Yu Gothic UI,Hiragino Sans,sans-serif" font-size="25" letter-spacing="4" fill="#8f1722">番号と住所を、どちらからでも。</text>
+    <g transform="translate(2 244)">
+      <rect width="438" height="74" fill="#fffdf6" stroke="#bbae94" stroke-width="2"/>
+      <text x="22" y="48" font-family="monospace" font-size="28" fill="#66635d">100-0001 / 千代田区千代田</text>
+      <rect x="350" y="10" width="76" height="54" fill="#bd2631"/>
+      <text x="388" y="46" text-anchor="middle" font-family="Yu Gothic UI,sans-serif" font-size="20" font-weight="700" fill="#fff">引く</text>
+    </g>
+  </g>
+  <g transform="translate(744 436)">
+    <rect width="350" height="92" fill="#fffdf6" stroke="#c4b9a3" stroke-width="2"/>
+    <text x="22" y="36" font-family="monospace" font-size="24" font-weight="700" fill="#8f1722">〒100-0001</text>
+    <text x="22" y="68" font-family="Yu Mincho,serif" font-size="19" fill="#20201e">東京都千代田区千代田</text>
+    <path d="M330 0h20v20" fill="#f3efe3" stroke="#c4b9a3" stroke-width="2"/>
+  </g>
+</svg>
+
