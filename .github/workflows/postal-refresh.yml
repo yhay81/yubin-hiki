@@ -2,7 +2,7 @@ name: postal-data-refresh
 
 on:
   schedule:
-    - cron: "23 21 * * 1"
+    - cron: "21 9 * * 4"
   workflow_dispatch:
 
 permissions:
@@ -12,7 +12,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 1
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
