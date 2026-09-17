@@ -1,10 +1,10 @@
 {
-  "csv_bytes": 18357448,
-  "data_updated_at": "2026-07-31",
+  "csv_bytes": 18358193,
+  "data_updated_at": "2026-08-31",
   "prefectures": 47,
-  "rows": 124513,
-  "sha256": "0b52620fb659846e1893416b333e23154243060325ff1d3d3747b221b915a19d",
+  "rows": 124523,
+  "sha256": "7d42728c4c9023e30668b1ef144fd5ffd831a417011c82d3e85ca3c35db43b15",
   "source_url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
-  "unique_postal_codes": 120682,
-  "zip_bytes": 2135283
+  "unique_postal_codes": 120717,
+  "zip_bytes": 2033269
 }
