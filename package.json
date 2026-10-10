@@ -22,23 +22,24 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "hono": "4.12.34"
+    "hono": "4.13.13"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.51.1",
-    "@cloudflare/workers-types": "5.20260726.1",
+    "@cloudflare/vite-plugin": "1.63.1",
+    "@cloudflare/workers-types": "5.20261006.1",
     "@types/node": "^26.1.2",
     "@voidzero-dev/vite-plus-core": "0.2.6",
-    "miniflare": "^5.20260801.1-alpha",
+    "miniflare": "5.20261006.1-alpha",
     "oxfmt": "0.60.0",
     "oxlint": "1.75.0",
     "typescript": "7.0.2",
     "vite": "npm:@voidzero-dev/vite-plus-core@0.2.6",
     "vite-plus": "0.2.6",
     "vitest": "4.1.10",
-    "wrangler": "4.120.0"
+    "wrangler": "4.149.0"
   },
   "overrides": {
+    "tinypool": "2.2.0",
     "vite": "npm:@voidzero-dev/vite-plus-core@0.2.6"
   },
   "engines": {
